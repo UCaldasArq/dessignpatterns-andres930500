@@ -7,9 +7,20 @@ package edu.ucaldas.creational;
 // Si el tipo no existe, retorna null.
 
 public class ShapeFactory {
+
     public Shape createShape(String type) {
-        // TODO: completa la lógica de creación
-        return null;
+        if (type == null) {
+            return null;
+        }
+
+        switch (type) {
+            case "Circle":
+                return new Circle();
+            case "Square":
+                return new Square();
+            default:
+                return null;
+        }
     }
 }
 

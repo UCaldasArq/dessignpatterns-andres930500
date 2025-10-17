@@ -1,11 +1,11 @@
-package edu.ucaldas.behavior;
+    package edu.ucaldas.behavior;
 
-public abstract class Handler {
-    protected Handler next;
+    public abstract class Handler {
+        protected Handler next;
 
-    public void setNext(Handler nextHandler) {
-        this.next = nextHandler;
+        public void setNext(Handler nextHandler) {
+            this.next = nextHandler;
+        }
+
+        public abstract String handleRequest(String request);
     }
-
-    public abstract String handleRequest(String request);
-}
